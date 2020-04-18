@@ -58,7 +58,7 @@
                     successBlock.show();
                     successBlock.text(data);
                     setTimeout(() => {
-                        window.location = '/';
+                        window.location = '/templates/auth.php';
                     }, 1500)
 
                 } else {
