@@ -5,7 +5,6 @@
     background-color: #f5f5f5;
 }
 
-.form-signin {
-    max-width: 400px;
-    margin: auto;
+#errorBlock, #successBlock {
+   display: none; 
 }
