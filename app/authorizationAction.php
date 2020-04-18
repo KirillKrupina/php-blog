@@ -1,5 +1,5 @@
 <?php
-require_once '../app/DB.php';
+require_once '../app/UserDB.php';
 
 $email = trim(filter_var($_POST['email'], FILTER_SANITIZE_EMAIL));
 $password = trim(filter_var($_POST['password'], FILTER_SANITIZE_STRING));
@@ -17,7 +17,7 @@ if ($error != '') {
     exit();
 } else {
     try {
-        $db = new DB();
+        $db = new UserDB();
         $user = $db->authUser($email, $password);
         if ($user->ID == 0) {
             echo 'User not found';

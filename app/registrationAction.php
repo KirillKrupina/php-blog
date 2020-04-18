@@ -1,5 +1,5 @@
 <?php
-require_once '../app/DB.php';
+require_once '../app/UserDB.php';
 
 
 $login = trim(filter_var($_POST['login'], FILTER_SANITIZE_STRING));
@@ -23,7 +23,7 @@ $error = '';
         exit();
 } else {
     try {
-        $db = new DB();
+        $db = new UserDB();
         $db->regUser($login, $email, $password);
         echo 'Success';
     } catch (Exception $e) {
