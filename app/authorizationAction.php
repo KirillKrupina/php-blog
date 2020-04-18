@@ -22,7 +22,7 @@ if ($error != '') {
         if ($user->ID == 0) {
             echo 'User not found';
         } else {
-            setcookie('log', $user->login, time() + 3600, "/");
+            setcookie('login', $user->login, time() + 3600, "/");
             echo 'Success';
         }
     } catch (Exception $e) {

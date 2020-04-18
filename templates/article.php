@@ -1,5 +1,5 @@
 <?
-    if($_COOKIE['log'] == '') {
+    if($_COOKIE['login'] == '') {
         header('Location: /registration.php');
     }
 ?>
@@ -12,6 +12,8 @@
     $title = 'Add article';
     require 'blocks/head.php';
     ?>
+
+
 </head>
 
 <body class="">
@@ -37,7 +39,9 @@
         <textarea name="intro" id="intro" class="form-control"></textarea>
 
         <label for="text" class="mt-2">Article text:</label>
-        <textarea name="text" id="text" class="form-control"></textarea>
+        <textarea name="text" id="text" class="form-control"  cols="30" rows="10"></textarea>
+
+
 
         <button class="btn btn-success mt-4" type="button" id="add_article">Add</button>
     </form>
@@ -45,6 +49,7 @@
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 
 <script>
     $('#add_article').click(() => {
@@ -80,6 +85,8 @@
             }
         });
     });
+
+
 
 
 </script>

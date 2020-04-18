@@ -1,3 +1,4 @@
 <?php
 
-setcookie('log', $user->login, time() + 3600, "/");
+setcookie('login', '', time() - 3600, "/");
+unset($_COOKIE['login']);

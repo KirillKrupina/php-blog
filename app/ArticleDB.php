@@ -10,14 +10,24 @@ class ArticleDB extends DB
         parent::connectToDb();
     }
 
-    public function addAricle($title, $intro, $text, $author){
+    public function addArticle($title, $intro, $text, $author){
         try {
-
             $sql = 'INSERT INTO articles(title, intro, text, date, author) VALUES(?, ?, ?, ?, ?)';
             $query = $this->connectToDb()->prepare($sql);
             $query->execute([$title, $intro, $text, time(), $author]);
-        } catch (mysqli_sql_exception $e) {
+        } catch (Exception $e) {
             echo 'Error: #' . $e;
+        }
+    }
+
+    public function getArticles(){
+        try {
+            $sql = 'SELECT * FROM articles ORDER BY date DESC';
+            $query = $this->connectToDb()->query($sql);
+        } catch (Exception $e) {
+            echo 'Error: #' . $e;
+        } finally {
+            return $query;
         }
     }
 

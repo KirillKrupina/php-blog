@@ -39,7 +39,7 @@
     <?
     else:
     ?>
-        <h2><?=$_COOKIE['log']?></h2>
+        <h2><?=$_COOKIE['login']?></h2>
     <?
     endif;
     ?>

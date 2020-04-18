@@ -17,7 +17,7 @@ class UserDB extends DB
             $sql = 'INSERT INTO users(login, email, password) VALUES(?, ?, ?)';
             $query = $this->connectToDb()->prepare($sql);
             $query->execute([$login, $email, $password]);
-        } catch (mysqli_sql_exception $e) {
+        } catch (Exception $e) {
             echo 'Error: #' . $e;
         }
     }
@@ -30,7 +30,7 @@ class UserDB extends DB
             $query->execute(['email' => $email, 'password' => $password]);
 
             return $query->fetch(PDO::FETCH_OBJ);
-        } catch (mysqli_sql_exception $e) {
+        } catch (Exception $e) {
             echo 'Error: #' . $e;
         }
     }

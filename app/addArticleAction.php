@@ -20,7 +20,7 @@ if ($error != '') {
     try {
         $db = new ArticleDB();
         $author = $_COOKIE['log'];
-        $article = $db->addAricle($title, $intro, $text, $author);
+        $article = $db->addArticle($title, $intro, $text, $author);
         echo 'Success';
     } catch (Exception $e) {
         echo 'Error: #' . $e;

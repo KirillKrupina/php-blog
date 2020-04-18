@@ -3,7 +3,7 @@
     <nav class="my-2 my-md-0 mr-md-3">
         <a class="p-2 text-dark" href="/">Main</a>
         <?
-        if ($_COOKIE['log'] != ''):
+        if ($_COOKIE['login'] != ''):
         ?>
             <a class="p-2 text-dark" href="/templates/article.php">Add article </a>
         <?
@@ -11,7 +11,7 @@
         ?>
     </nav>
     <?
-    if ($_COOKIE['log'] == ''):
+    if ($_COOKIE['login'] == ''):
     ?>
         <a class="btn btn-success ml-2 mr-2 mb-1" href="/templates/auth.php">Sign in</a>
         <a class="btn btn-outline-primary mb-1" href="/templates/registration.php">Sign up</a>
