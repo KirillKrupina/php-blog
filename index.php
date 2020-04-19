@@ -24,7 +24,9 @@
                             "<h2>$row->title</h2>
                             <p>$row->intro</p>
                             <p><b>Author: </b><mark>$row->author</mark></p>
-                            <button class='btn btn-warning mb-5'>More...</button>"
+                            <a href='/templates/news.php?id=$row->id' title=$row->title
+                                <button class='btn btn-warning mb-5'>More...</button>
+                            </a>"
                         ;
 
                     }

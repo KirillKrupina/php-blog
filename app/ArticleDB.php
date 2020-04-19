@@ -31,4 +31,16 @@ class ArticleDB extends DB
         }
     }
 
+    public function getArticleById($id){
+        try {
+            $sql = "SELECT * FROM articles WHERE id = $id";
+            $query = $this->connectToDb()->query($sql);
+
+        } catch (Exception $e) {
+            echo 'Error: # ' . $e;
+        } finally {
+            return $query;
+        }
+    }
+
 }
