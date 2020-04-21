@@ -21,7 +21,7 @@ abstract class DB
         try {
             $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->db;
             return new PDO($dsn, $this->db_user, $this->db_password);
-        } catch (mysqli_sql_exception $e) {
+        } catch (Exception $e) {
             echo 'Error: #' . $e;
         }
     }

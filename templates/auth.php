@@ -13,7 +13,7 @@
 
 <div>
     <?
-    if ($_COOKIE['log'] == ''):
+    if ($_COOKIE['login'] == ''):
     ?>
         <form action="" method="" class="form-signin" style=" max-width: 400px; margin: auto;">
 
@@ -39,7 +39,7 @@
     <?
     else:
     ?>
-        <h2><?=$_COOKIE['login']?></h2>
+        <h2 class="text-center"><?=$_COOKIE['login']?></h2>
     <?
     endif;
     ?>
